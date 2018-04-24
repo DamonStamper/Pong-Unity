@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 976fa84bc9c13244e8afb153ed508d6d
+timeCreated: 1524426378
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - goalBloop: {fileID: 8300000, guid: b848e0face70d254b938be645b010497, type: 3}
+  - lossBuzz: {fileID: 8300000, guid: fdd42e9881861c84091fdc5cb04a3c45, type: 3}
+  - hitPaddleBloop: {fileID: 8300000, guid: 41a390b63f49c8f43b238d3ef0142299, type: 3}
+  - winSound: {fileID: 8300000, guid: 0983aaa1a7d93454d9670a5db4265a25, type: 3}
+  - wallBloop: {fileID: 8300000, guid: bbd47ecc293620445b237b20b506847d, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
