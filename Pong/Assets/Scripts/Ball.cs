@@ -77,7 +77,7 @@ public class Ball : MonoBehaviour {
 
         // Go left or right on the x axis
         // depending on which panel was hit
-        if(col.gameObject.name == "Paddle, reft")
+        if(col.gameObject.name == "Paddle, left")
         {
             dir = new Vector2(1, y).normalized;
         }
