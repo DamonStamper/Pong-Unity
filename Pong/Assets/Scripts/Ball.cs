@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ball : MonoBehaviour {
 
@@ -52,7 +53,14 @@ public class Ball : MonoBehaviour {
             // Play the sound effect
             SoundManager.Instance.PlayOneShot(SoundManager.Instance.goalBloop);
 
-            // TODO Update Score UI
+            if (col.gameObject.name == "Wall, left")
+            {
+                IncreaseTextUIScore("RightScoreUI");
+            }
+            else if (col.gameObject.name == "Wall, right")
+            {
+                IncreaseTextUIScore("LeftScoreUI");
+            }
 
             // Move the ball to the center of the screen
             transform.position = new Vector2(0, 0);
@@ -103,4 +111,15 @@ public class Ball : MonoBehaviour {
         return (ball.y - paddle.y) / paddleHeight;
     }
 
+    void IncreaseTextUIScore(string textUIName)
+    {
+        var textUIComponents = GameObject.Find
+            (textUIName).GetComponent<Text>();
+        int score = int.Parse(textUIComponents.text);
+
+        score++;
+
+        textUIComponents.text = score.ToString();
+
+    }
 }
